@@ -9,27 +9,6 @@
 			<a class="navbar-brand" href="#">DAAANNCEEE FIGHT</a>
 		</div>
 	</header>
-	<div id="main" class="row-fluid">
-    <iframe type="text/html" width="49%" height="360"
-    src="https://www.youtube.com/embed/M7lc1UVf-VE"
-    frameborder="0" allowfullscreen></iframe>
-    <iframe type="text/html" width="49%" height="360" 
-    src="http://www.youtube.com/embed/W7qWa52k-nE"
-    frameborder="0" allowfullscreen></iframe>
-    <div id="loading">
-    </div>
-    <button class="play" name="button"></button>
-	</div>
+  {{> videoPlayer}}
 </div>
-
-  <script>
-    $( "button" ).on( "click", function() {
-      $("#loading").css("display", "none");
-      if ( $("button").hasClass("play") ) { 
-        $('button').addClass('pause').removeClass('play');
-      } else {
-        $('button').addClass('play').removeClass('pause');
-      }
-    });
-  </script>
 </body>
