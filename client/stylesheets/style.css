@@ -8,8 +8,12 @@ button {
   border-radius: 100%;
 }
 
-button:after {
+.play:after {
   content: "\25B6";
+}
+
+.pause:after {
+  content: "\2590\2590";
 }
 
 #loading {

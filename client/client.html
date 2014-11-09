@@ -17,8 +17,19 @@
     src="http://www.youtube.com/embed/W7qWa52k-nE"
     frameborder="0" allowfullscreen></iframe>
     <div id="loading">
-      <button name="play"></button>
     </div>
+    <button class="play" name="button"></button>
 	</div>
 </div>
+
+  <script>
+    $( "button" ).on( "click", function() {
+      $("#loading").css("display", "none");
+      if ( $("button").hasClass("play") ) { 
+        $('button').addClass('pause').removeClass('play');
+      } else {
+        $('button').addClass('play').removeClass('pause');
+      }
+    });
+  </script>
 </body>
