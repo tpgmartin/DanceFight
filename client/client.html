@@ -1,14 +1,21 @@
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-	<title>DAANCEEE FIGHT</title>
-</head>
-<body>
-<div class="container">
-	<header class="navbar navbar-default" role="navigation">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">DAAANNCEEE FIGHT</a>
-		</div>
-	</header>
-  {{> videoPlayer}}
-</div>
-</body>
+<template name="client">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="coll
+apse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+</button>
+        <a class="navbar-brand" href="#">DAANCE FIGHT</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+</ul> </div>
+    </div>
+  </nav>
+{{> yield}}
+</template>

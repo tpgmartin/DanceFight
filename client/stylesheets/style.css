@@ -1,4 +1,9 @@
-button {
+form{
+	width:80%;
+	margin:0 auto;
+}
+
+/*button {
   width: 100px;
   height: 100px;  
   position: absolute;
@@ -28,4 +33,4 @@ button {
 
 iframe {
   z-index: -1000;
-}
+}*/

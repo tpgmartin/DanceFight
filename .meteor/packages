@@ -6,3 +6,13 @@
 meteor-platform
 autopublish
 insecure
+mizzao:bootstrap-3
+accounts-password
+accounts-twitter
+iron:router
+ian:accounts-ui-bootstrap-3
+accounts-facebook
+copleykj:mesosphere
+aldeed:autoform
+aldeed:collection2
+
