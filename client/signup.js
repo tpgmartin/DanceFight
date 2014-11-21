@@ -1,5 +1,8 @@
-Books = new Mongo.Collection("books");
-Books.attachSchema(new SimpleSchema({
+// https://github.com/aldeed/meteor-autoform#installation
+Meteor.subscribe('groups');
+
+Groups = new Mongo.Collection("groups");
+Groups.attachSchema(new SimpleSchema({
   title: {
     type: String,
     label: "Group Name",
