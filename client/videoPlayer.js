@@ -23,7 +23,8 @@ Template.videoPlayer.events({
      $("#loading").css("display", "none");
      
      if ( $("button").hasClass("play") ) { 
-       $('button').addClass('pause').removeClass('play');
+       $('button.play').addClass('pause').removeClass('play');
+       $('button.pause').text('PAUSE')
        $('.video').each(function(){
           this.src += "&autoplay=1";
           ev.preventDefault();

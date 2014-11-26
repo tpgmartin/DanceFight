@@ -1,24 +1,16 @@
 <template name="videoPlayer">
-	<div class="container">
-  <div id="main" class="row-fluid">
-	{{#each groups}}
-	<div class="col-sm-6">
-    <iframe class="video" type="text/html" width="100%" height="360"
-    src="{{url}}"
-    frameborder="0" allowfullscreen></iframe>
+  <div class="container">
+    <div id="main" class="row-fluid">
+      {{#each groups}}
+        <div class="col-sm-6">
+          <iframe class="video" type="text/html" width="100%" height="360" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+          <button class="vote" id="{{id}}">Vote for {{title}}</button >
+        </div>
+      {{/each}}
 
-	<button class="vote" id="{{id}}">Vote for {{title}}</button >
-		</div>
-{{/each}}
-
-
-    <div id="loading">
+      <div id="loading">
+      </div>
+      <button class="play" name="button">PLAY</button>
     </div>
-    <button class="play" name="button">PLAY</button>
   </div>
-</div>
-
-
-
-
 </template>

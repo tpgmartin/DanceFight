@@ -3,16 +3,16 @@ form{
 	margin:0 auto;
 }
 
-/*button {
+button.play, button.pause {
   width: 100px;
   height: 100px;  
   position: absolute;
-  top: 170px;
+  top: calc(50% - 50px);
   left: calc(50% - 50px);
   z-index: 1000;
   border-radius: 100%;
 }
-
+/*
 .play:after {
   content: "\25B6";
 }
@@ -33,4 +33,5 @@ form{
 
 iframe {
   z-index: -1000;
-}*/
+}
+*/
