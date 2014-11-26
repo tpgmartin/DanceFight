@@ -3,7 +3,19 @@ form{
 	margin:0 auto;
 }
 
-button.play, button.pause {
+#play {
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+}
+#pause {
+    width: 100px;
+    height: 100px;
+    background-color: #00f;
+    display: none;
+}
+
+/*button.play, button.pause {
   width: 100px;
   height: 100px;  
   position: absolute;
@@ -11,7 +23,7 @@ button.play, button.pause {
   left: calc(50% - 50px);
   z-index: 1000;
   border-radius: 100%;
-}
+}*/
 /*
 .play:after {
   content: "\25B6";
