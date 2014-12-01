@@ -1,5 +1,3 @@
-// Want to autoplay videos on load and automatically pause as screen loads
-// Add in play/pause button to add usability 
 Groups = [ {
     title: 'Video1',
     id: '1',
@@ -11,8 +9,6 @@ Groups = [ {
     url: 'http://www.youtube.com/embed/W7qWa52k-nE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
 }
 ];
-
-
 
 Template.videoPlayer.helpers({
 	groups: Groups
@@ -32,29 +28,6 @@ Template.videoPlayer.events({
     $('#pause').css('display', 'none');
     $('#play').css('display', 'inherit');
   },
-
-  // "click button.play": function () {
-  //   alert('asdas');
-  // },
-  // "click button.play": function (ev) {
-  //    $("#loading").css("display", "none");
-     
-  //    if ( $("button").hasClass("play") ) { 
-  //      $('button.play').addClass('pause').removeClass('play');
-  //      $('button.pause').text('PAUSE')
-  //      $('.video').each(function(){
-  //         this.src += "&autoplay=1";
-  //         ev.preventDefault();
-  //      });
-  //    } else {
-  //      $('button').addClass('play').removeClass('pause');
-  //      $('.video').each(function(){
-  //         // Replace this 
-  //         this.src.replace("&autoplay=1","");
-  //         ev.preventDefault();
-  //       });
-  //    }
-  // },
  
  "click button.vote": function (ev) {
 	alert('Voted for : Video ' + this.id);

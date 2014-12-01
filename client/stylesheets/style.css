@@ -7,12 +7,26 @@ form{
     width: 100px;
     height: 100px;
     background-color: #f00;
+    border-radius: 100%;
+    border: 0;
+    margin: 0 calc(50% - 50px);
 }
+#play:after {
+  content: "\25B6";
+}
+
+
 #pause {
     width: 100px;
     height: 100px;
     background-color: #00f;
     display: none;
+    border-radius: 100%;
+    border: 0;
+    margin: 0 calc(50% - 50px);
+}
+#pause:after {
+  content: "\2590\2590";
 }
 
 /*button.play, button.pause {
