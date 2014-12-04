@@ -1,14 +1,13 @@
 Groups = [ {
-    title: 'Introducing Telescope',
-    url: 'http://sachagreif.com/introducing-telescope/'
+    title: 'Video1',
+    id: '1',
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
   },
   {
-    title: 'Meteor',
-    url: 'http://meteor.com'
-}, {
-    title: 'The Meteor Book',
-    url: 'http://themeteorbook.com'
-  }
+    title: 'Video2',
+    id: '2',
+    url: 'http://www.youtube.com/embed/W7qWa52k-nE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+}
 ];
 
 
