@@ -39,8 +39,7 @@ Template.videoPlayer.events({
   },
 
   "click button#pause": function () {
-    player1.pauseVideo();
-    player2.pauseVideo();
+    pauseVideo();
     $('#pause').css('display', 'none');
     $('#play').css('display', 'inherit');
   },
@@ -55,6 +54,11 @@ Template.videoPlayer.events({
 function playVideo() {
   player1.playVideo();
   player2.playVideo(); 
+}
+
+function pauseVideo() {
+  player1.pauseVideo();
+  player2.pauseVideo();
 }
 
 function onPlayerReady(event) {
