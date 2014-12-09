@@ -1,3 +1,8 @@
+// Easiest solution:
+// * Choose two videos from groups at random,
+// * Only every refer to two players: player1, platyer2,
+// 
+
 Groups = [ {
     title: 'Video1',
     id: '1',
@@ -5,24 +10,32 @@ Groups = [ {
   },
   {
     title: 'Video2',
-    id: '2',
-    url: 'http://www.youtube.com/embed/W7qWa52k-nE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    id: '5',
+    url: 'http://www.youtube.com/embed/nhxvgpTl7BU?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
 }
 ];
 
 onYouTubeIframeAPIReady = function () {
-    for (var i=1; i<Groups.length+1; i++) {
-        window['preloading' + i] = false;
-        window['player' + i] = new YT.Player("player" + i, {
-            height: "360", 
-            width: "100%", 
-            videoId: Groups[i-1].url.split('/').slice(-1)[0],
-            events: {
-              'onReady': onPlayerReady
-            }
+  videos = Groups, selected_videos = [];
+  var range1 = videos.pop(videos[Math.floor(Math.random() * videos.length)]);
+  var range2 = videos.pop(videos[Math.floor(Math.random() * videos.length)]);
+  selected_videos.push(range1);
+  selected_videos.push(range2);
+  console.log(Groups);
+  console.log(videos);
+  console.log(selected_videos);
+  for (var i=1; i<selected_videos.length+1; i++) {
+      window['preloading' + i] = false;
+      window['player' + i] = new YT.Player("player" + i, {
+          height: "360", 
+          width: "100%", 
+          videoId: selected_videos[i-1].url.split('/').slice(-1)[0],
+          events: {
+            'onReady': onPlayerReady
+          }
 
-        });
-    }
+      });
+  }
 };
 
 YT.load();
@@ -32,7 +45,7 @@ Template.videoPlayer.helpers({
 });
 
 Template.videoPlayer.events({
-  "click button#play": function () {
+  "click button#play": function (ev) {
     playVideo();
     $('#play').css('display', 'none');
     $('#pause').css('display', 'inherit');
@@ -52,26 +65,29 @@ Template.videoPlayer.events({
 
 // helpers
 function playVideo() {
-  player1.playVideo();
-  player2.playVideo(); 
+  if (player1) {
+    player1.playVideo();    
+  } else if (player2) {
+    player2.playVideo();     
+  }
 }
 
 function pauseVideo() {
-  player1.pauseVideo();
-  player2.pauseVideo();
+  if (player1) {
+    player1.pauseVideo();    
+  } else if (player2) {
+    player2.pauseVideo();     
+  }
 }
 
 function onPlayerReady(event) {
-  // var videos = $('.video');
-  // for (var i=0; i<videos.length; i++) {
-  //   window['preloading' + 1] = true;
-  //   window['player' + i].seekTo(0);
-  //   window['player' + i].pauseVideo();
-  // }
-  preloading1 = true; 
-  preloading2 = true; 
-  player1.seekTo(0);
-  player2.seekTo(0);
-  player1.pauseVideo();
-  player2.pauseVideo();
+  if (player1) {
+    preloading1 = true; 
+    player1.seekTo(0);
+    player1.pauseVideo();
+  } else if (player2) {
+    preloading2 = true; 
+    player2.seekTo(0);
+    player2.pauseVideo();
+  }
 }
