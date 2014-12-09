@@ -7,22 +7,22 @@ Groups = [
   {
     title: 'Video2',
     id: '2',
-    url: 'http://www.youtube.com/embed/nhxvgpTl7BU?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
   },
   {
     title: 'Video3',
     id: '3',
-    url: 'http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
   },
   {
     title: 'Video4',
     id: '4',
-    url: 'http://www.youtube.com/embed/nhxvgpTl7BU?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
   },
   {
     title: 'Video5',
     id: '5',
-    url: 'http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
   }
 ];
 

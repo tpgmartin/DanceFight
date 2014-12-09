@@ -10,8 +10,8 @@ Groups = [ {
   },
   {
     title: 'Video2',
-    id: '5',
-    url: 'http://www.youtube.com/embed/nhxvgpTl7BU?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
+    id: '2',
+    url: 'https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&enablejsapi=1&html5=1&controls=0&showinfo=0&rel=0'
 }
 ];
 
@@ -65,29 +65,26 @@ Template.videoPlayer.events({
 
 // helpers
 function playVideo() {
-  if (player1) {
+  if (player1 && player2) {
     player1.playVideo();    
-  } else if (player2) {
     player2.playVideo();     
   }
 }
 
 function pauseVideo() {
-  if (player1) {
+  if (player1 && player2) {
     player1.pauseVideo();    
-  } else if (player2) {
-    player2.pauseVideo();     
-  }
+    player2.pauseVideo();    
+  } 
 }
 
 function onPlayerReady(event) {
-  if (player1) {
+  if (player1 && player2) {
     preloading1 = true; 
-    player1.seekTo(0);
-    player1.pauseVideo();
-  } else if (player2) {
     preloading2 = true; 
+    player1.seekTo(0);
     player2.seekTo(0);
+    player1.pauseVideo();
     player2.pauseVideo();
   }
 }
